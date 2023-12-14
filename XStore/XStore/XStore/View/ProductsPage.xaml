@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             x:Class="XStoreApp.View.ProductsPage">
+
+
+    <Grid Padding="25">
+        <Label Text="Products" FontSize="24" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="StartAndExpand" Margin="0,0,0,20" />
+            <ListView x:Name="productListView" 
+                  HasUnevenRows="True"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="Black" 
+                  ItemsSource= "{Binding Products}" 
+                  ItemSelected="productListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Grid.Column="0" Grid.Row="0" Text="Product ID:"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding productId}"
+                                   VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="0" Grid.Row="1" Text="Product Name:"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding productName}"
+                                   FontAttributes="Bold" FontSize="18" VerticalOptions="StartAndExpand"/>
+                            <Label Grid.Column="0" Grid.Row="2" Text="Price:"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Price, StringFormat='{0:C}'}"
+                                   VerticalOptions="StartAndExpand"/>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    
+</ContentPage>

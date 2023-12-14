@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XStoreApp.View.OrdersViewPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="#f9f9f9">
+            <Label Text="List of Orders" FontSize="24" FontAttributes="Bold"
+                   Margin="0,20,0,30"/>
+            <ListView x:Name="orderInformationListView" 
+                  HasUnevenRows="True"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="Black" 
+                  ItemsSource= "{Binding Orders}" 
+                  ItemSelected="orderInformationListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Spacing="5">
+                                <Label Text="Order Number" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding orderNumber, StringFormat='Order Number: {0:B}'}"
+                                       VerticalOptions="Center" FontSize="16"/>
+
+                                <Label Text="Order Date" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding orderDate, StringFormat='Order Date: {0:dd MMM yyyy}'}"
+                                       VerticalOptions="Center" FontSize="16"/>
+
+                                <Label Text="Order Status" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding orderStatus, StringFormat='Order Status: {0}'}"
+                                       VerticalOptions="Center" FontSize="16" FontAttributes="Italic"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

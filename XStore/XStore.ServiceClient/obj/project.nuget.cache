@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cl/b5dzTePBm5Atzra2MaUWrVIxwDJbYZhgzUvEo5wwttrRm2Lb80XMUSpUaR5LhXfrU2RcV/S+jRCtL/vEXcA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ummut\\OneDrive\\Desktop\\praksa\\Magacin_Praksa\\XStore\\XStore.ServiceClient\\XStore.ServiceClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ummut\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\microsoft.rest.clientruntime.2.3.24.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

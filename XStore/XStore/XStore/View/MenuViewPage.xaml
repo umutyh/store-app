@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XStoreApp.View.MenuPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="#f9f9f9">
+            <Label Text="Menu" FontSize="32" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,20,0,40" />
+
+            <button:SfButton x:Name="listPage_button" Clicked="listPage_button_Clicked" Text="List Page"
+                              Margin="0,0,0,20" Padding="20" BorderWidth="3" BackgroundColor="#2196F3" TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="10"/>
+
+            <button:SfButton x:Name="tabbedMenu_button" Clicked="tabbedMenu_button_Clicked" Text="Tabbed Menu Page"
+                              Margin="0,0,0,20" Padding="20" BorderWidth="3" BackgroundColor="#2196F3" TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

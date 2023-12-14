@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XStoreApp.ViewModel"
+             x:Class="XStoreApp.View.PaymentViewPage">
+    <ContentPage.BindingContext>
+        <local:PaymentViewModel></local:PaymentViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+
+            <Entry x:Name="username" Placeholder="username" TextColor="Black" PlaceholderColor="#a0a0a0"
+                   BackgroundColor="#f5f5f5" Margin="0,0,0,10"/>
+            <Entry x:Name="password" Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="#a0a0a0"
+                   BackgroundColor="#f5f5f5" Margin="0,0,0,10"/>
+
+            <Button Clicked="loginButton_Clicked" Text="LOGIN" x:Name="loginButton" HeightRequest="50" VerticalOptions="End"
+                    HorizontalOptions="FillAndExpand" Margin="20,0,20,0" CornerRadius="10"
+                    Padding="15,10" FontSize="18"  FontAttributes="Bold"
+                    Grid.Row="3"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

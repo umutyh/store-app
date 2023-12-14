@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             x:Class="XStoreApp.View.OrderTabbedViewPage">
+    
+    <ContentPage.Content>
+        <tabView:SfTabView BackgroundColor="#f9f9f9">
+            <tabView:SfTabItem Title="Search Order" TitleFontSize="16">
+                <tabView:SfTabItem.Content>
+                    <StackLayout Padding="20">
+                        <inputLayout:SfTextInputLayout Hint="Number" BackgroundColor="White">
+                            <Entry x:Name="inputNumber" Placeholder="Enter Order Number"/>
+                        </inputLayout:SfTextInputLayout>
+                        <button:SfButton Text="Search" Clicked="button_searchNumber"
+                                         BackgroundColor="#2196F3" TextColor="White"
+                                         HorizontalOptions="EndAndExpand" Margin="0,20,0,0"/>
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"/>
+                        <Label x:Name="orderNumberShow" Text="Order Number" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+                        <Label x:Name="orderDateShow" Text="Order Date" FontSize="16" Margin="0,10,0,0" TextColor="#333333"/>
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+                        <Label x:Name="orderStatusShow" Text="Order Status" FontSize="14" Margin="0,10,0,0" TextColor="#333333"/>
+                        <border:SfBorder BackgroundColor="#2196F3" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Order Details" TitleFontSize="16">
+                <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="#f9f9f9" x:Name="AllOrderDetails">
+                        <StackLayout Padding="20">
+                            <StackLayout>
+                                <Label  Text="Order Number" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Label  Text="{Binding OrderDetailsItem.OrderNumber}" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Label Text="Price" FontSize="16" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Editor x:Name="priceUpdate"  Text="{Binding OrderDetailsItem.Price}" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Label  Text="Quantity" FontSize="14" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Editor x:Name="quantityUpdate" Text="{Binding OrderDetailsItem.Quantity}" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Label Text="SKU" FontSize="14" Margin="0,10,0,0" TextColor="#333333"/>
+                                <Label  Text="{Binding OrderDetailsItem.Sku}" FontSize="18" Margin="0,10,0,0" TextColor="#333333"/>
+                            </StackLayout>
+                            <Button Text="Next" Clicked="NextButton_Clicked" BackgroundColor="#2196F3" TextColor="White"
+                        HorizontalOptions="EndAndExpand" Margin="0,20,0,0"/>
+
+                            <Button Text="Previous" Clicked="PreviousButton_Clicked" BackgroundColor="#2196F3" TextColor="White"
+                        HorizontalOptions="StartAndExpand" Margin="0,10,0,0"/>
+                            <Button Text="Save changes" Clicked="updateValueButton_Clicked" BackgroundColor="#2196F3" TextColor="White"
+                        HorizontalOptions="EndAndExpand" Margin="0,10,0,0"/>
+
+                        </StackLayout>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+    </ContentPage.Content>
+</ContentPage>

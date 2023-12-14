@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "+nlhKHjeG8/r/K12CCjOiVsMCkjmfUwPrF0ukwRZh2qoDho13Su3rJxudnBKzjc/SI1tfPq3Iz9nyT9sQMAI2A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ummut\\OneDrive\\Desktop\\praksa\\Magacin_Praksa\\XStore\\XStore.Service\\XStore.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ummut\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\microsoft.rest.clientruntime.2.3.24.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\ummut\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
