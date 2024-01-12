@@ -41,7 +41,7 @@ namespace store.API.Controllers
                 return BadRequest("Invalid request");
             }
 
-            // request.PAssword doagja Encriptiran
+            
             bool isAuthenticated = await _authService.AuthenticateUser(request.UserName, request.Password);
 
             if (isAuthenticated)
